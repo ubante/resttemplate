@@ -26,11 +26,17 @@ public class R6 {
     // when you want to return an object
     rb.entity(cm.car("234"));
 
-    // force it to xml
+    // force it to xml overriding what the client requests
     rb.entity(cm.car("234")).encoding(MediaType.APPLICATION_XML);
+
+    // force it to json overriding what the client requests
+    rb.entity(cm.car("234")).encoding(MediaType.APPLICATION_JSON);
 
     // add a cookie
     rb.cookie(new NewCookie("cookieName", "cookieValue"));
+
+    // since REST is stateless, shove some state in a header
+    rb.header("my-transaction-number", "1234321");
 
     return rb.build();
   }
