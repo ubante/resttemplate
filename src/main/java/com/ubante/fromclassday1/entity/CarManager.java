@@ -1,7 +1,5 @@
 package com.ubante.fromclassday1.entity;
 
-import oracle.jrockit.jfr.StringConstantPool;
-
 import javax.ws.rs.GET;
 import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
